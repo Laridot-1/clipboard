@@ -1,0 +1,270 @@
+/* general styling */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration-line: none;
+  list-style-type: none;
+}
+
+html, body{
+  height: 100%;
+}
+
+img, picture, video, svg, canvas{
+  display: block;
+  max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6{
+  overflow-wrap: break-word;
+}
+
+body{
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+
+p{
+  color: var(--grayish-blue);
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.6;
+  max-width: 35rem;
+  margin: auto;
+}
+
+/* end of general styling */
+
+/* utilities */
+.btn_container{
+  display: grid;
+  justify-content: center;
+  grid-row-gap: 1rem;
+  margin-block: 3rem;
+}
+.btn{
+  font-size: 18px;
+  font-weight: 600;
+  color: hsl(0 0% 100%);
+  outline: none;
+  border: none;
+  padding: 1rem 5rem;
+  border-radius: 100vmax;
+}
+.btn_cyan{
+  background-color: var(--strong-cyan);
+}
+.btn_cyan:hover{
+  background-color: hsl(171 66% 44% / 0.8);
+}
+.btn_blue{
+  background-color: var(--light-blue);
+}
+.btn_blue:hover{
+  background-color: hsl(233 100% 69% / 0.8);
+}
+
+.container{
+  padding: 2rem 2rem 0 2rem;
+}
+
+/* end of utilities */
+
+header{
+  background-image: url('bg-header-mobile.png');
+  background-repeat: no-repeat;
+}
+
+header img{
+  margin: 5rem auto 4rem auto;
+}
+
+.sec1 h2{
+  font-size: 2.2rem;
+  color: var(--dark-grayish-blue);
+  margin-block: 1rem;
+  text-align: center;
+}
+
+.div1{
+  margin-block: 3rem;
+}
+
+.div1 h3{
+  font-size: 2rem;
+  color: var(--dark-grayish-blue);
+  text-align: center;
+  margin-block: 1rem;
+}
+
+.div2{
+  margin-block: 2rem;
+}
+
+.div2 img{
+  margin: auto;
+}
+
+.div2_child{
+  margin-block: 3rem;
+}
+
+.div2_child div{
+  margin-block: 2.5rem;
+}
+
+.div2_child h4{
+  text-align: center;
+  margin-block-end: 1rem;
+  color: var(--dark-grayish-blue);
+  font-size: 1.5rem;
+}
+
+.sec3{
+  margin-block: 3rem;
+}
+
+.div3 h3{
+  color: var(--dark-grayish-blue);
+  text-align: center;
+  margin-block: 1rem;
+  font-size: 2rem;
+}
+
+.sec3 img{
+  margin: 2rem auto 2rem auto;
+}
+
+.div4 h3{
+  color: var(--dark-grayish-blue);
+  font-size: 2rem;
+  text-align: center;
+  margin-block: 1rem;
+}
+
+.sec4_child{
+  margin-block: 4rem;
+}
+
+.sec4__child img{
+  margin: 2rem auto 2rem auto;
+}
+
+.sec4__child h4{
+  color: var(--dark-grayish-blue);
+  text-align: center;
+  margin-block: 1rem;
+}
+
+.sec5{
+  display: grid;
+  grid-row-gap: 3rem;
+}
+
+.sec5 img{
+  margin: auto;
+}
+
+.sec6{
+  margin-block: 4rem;
+}
+
+.sec6 h3{
+  color: var(--dark-grayish-blue);
+  text-align: center;
+  margin-block: 1rem;
+  font-size: 2rem;
+}
+
+footer{
+  background-color: hsl(10 100% 90% / 0.2);
+  padding: 2rem 0;
+}
+
+[alt="logo"]{
+  width: 4rem;
+  object-fit: contain;
+  margin: 0 auto 2rem auto;
+}
+
+footer li{
+  margin-block: 1.5rem;
+  text-align: center;
+}
+
+footer a{
+  color: var(--dark-grayish-blue);
+  font-size: 18px;
+}
+
+footer a:hover{
+  color: var(--strong-cyan);
+}
+
+.icon_ctn{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0 0 0;
+}
+
+.icon_ctn img{
+  width: 2rem;
+  object-fit: contain;
+}
+
+@media(min-width: 1000px){
+  header{
+    background-image: url('bg-header-desktop.png');
+    background-repeat: no-repeat;
+  }
+  
+  .btn_container{
+    grid-auto-flow: column;
+    column-gap: 1rem;
+  }
+  
+  .div2{
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  
+  .div2_child div{
+    display: grid;
+  }
+  
+  .div2_child div h4, .div2_child div p{
+    justify-self: start;
+  }
+  
+  .sec4_child{
+    display: grid;
+    grid-auto-flow: column;
+  }
+  
+  .sec5{
+    grid-auto-flow: column;
+  }
+  
+  footer .container{
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+  }
+}
+
+:root{
+  --strong-cyan: hsl(171, 66%, 44%);
+  --light-blue: hsl(233, 100%, 69%);
+  --dark-grayish-blue: hsl(210, 10%, 33%);
+  --grayish-blue: hsl(201, 11%, 66%);
+}
